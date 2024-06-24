@@ -1,0 +1,50 @@
+**Initialize:**
+    - Set counter for entropy checks: entropy_checks = 0
+    - Set counter for packets received: packet_count = 0
+    - Set consecutive anomaly counter: consecutive_anomalies = 0
+    - Initialize historical entropy data storage: historical_entropy = deque(maxlen=5)
+    - Set initial dynamic threshold: theta = initial_threshold (calculated as per the provided paper)
+
+**On Packet Arrival:**
+   
+    **If (packet_count % 50 == 0):**
+        - Calculate entropy (H) of the window using features and weighted average.
+        - Push into historical_entropy with the new entropy value H.
+        - Increment entropy_checks
+        
+        **Update EWMA:**
+            - Decay weights of remaining historical_entropy.
+            - theta_new = alpha * H + (1 - alpha) * theta_old
+        
+        **Check for Potential Attack:**
+            - **If (H < theta_new):**
+                - Increment consecutive_anomalies
+                - **If (consecutive_anomalies >= 5):**
+                    - Call Procedure_3()
+                    - Reset consecutive_anomalies
+            **Else (H >= theta_new):**
+                - Reset consecutive_anomalies
+            
+
+        **If (entropy_checks >= 5):**
+            - Remove oldest entry from historical_entropy.
+            - Continue monitoring
+
+        - Reset window
+        - Add new packet data to window.
+        - Increment packet_count
+
+    **Else:**
+        - Add new packet data to window.
+        - Increment packet_count
+
+
+Procedure_3 : 
+    - Classify as potential attack.
+    - Analyze additional features for insights.
+    - Classify attack type based on analysis and potential attack signatures.
+    - Trigger appropriate response mechanisms:
+    - Rate limiting
+    - Dropping suspicious packets
+    - Notifying administrators
+    - Updating attack classifier model

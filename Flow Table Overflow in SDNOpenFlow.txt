@@ -1,0 +1,29 @@
+Flow Table Overflow in SDN/OpenFlow
+
+In SDN/OpenFlow networks, switches use flow tables to store information about how to handle network traffic.
+However, these flow tables have a limited capacity, meaning they can only store a certain number of flow entries.
+When the flow table is full and new flow entries need to be added, the controller and switch need to interact to remove existing flow entries and make room for the new ones.
+This interaction between the controller and switch to manage the flow table can result in a decrease in network performance.
+This decrease in performance can be exploited by an attacker to infer the internal state of the SDN, including the flow table capacity and usage.
+Attacker's Perspective
+
+In this scenario, the attacker is located within a network that is managed by an SDN.
+The attacker can actively generate network traffic to trigger the interactions between the controller and switch related to flow entry insertion and deletion.
+By measuring the change in network performance resulting from these interactions, the attacker can estimate the internal state of the SDN, specifically the flow table capacity and flow table usage.
+Exploiting the Vulnerability
+
+How does the flow table capacity affect network performance?
+
+Limited flow table capacity in SDN/OpenFlow switches can lead to a measurable decrease in network performance due to frequent interactions between the data and control plane when the flow table is full.
+When the flow table is full, the performance of the network can be negatively impacted as the switches need to handle the overflow of flow entries, resulting in delays and potential packet drops.
+The decrease in network performance can affect the overall efficiency and responsiveness of the SDN/OpenFlow network, potentially leading to degraded user experience and reduced network throughput.
+The vulnerability introduced by the limited flow table capacity can be exploited through inference attacks, where an attacker can infer network parameters, including flow table capacity and usage, by analyzing the performance degradation caused by a full flow table.
+To mitigate this vulnerability and protect against inference attacks, defense strategies such as routing aggregation algorithms and multilevel flow table architecture can be implemented. These strategies aim to reduce flow table space consumption and increase flow table capacity, respectively, improving network performance and enhancing the efficiency of SDN/OpenFlow networks.
+
+Limitations of this paper:
+
+The paper does not provide an extensive analysis of the potential impact of the proposed defense strategies on network performance and resource utilization.
+The evaluation results of the proposed inference attack framework do not provide a comprehensive assessment of its effectiveness and accuracy in real-world scenarios.
+The paper does not discuss the potential limitations or challenges in implementing the proposed defense strategies, such as the feasibility of deploying routing aggregation algorithms or the impact of multilevel flow table architecture on network management.
+The paper does not explore alternative defense strategies or compare the proposed strategies with existing approaches for mitigating flow table overflow vulnerabilities in SDN/OpenFlow networks.
+The paper does not address the potential trade-offs or implications of the proposed defense strategies in terms of network scalability, complexity, or compatibility with existing SDN/OpenFlow deployments

@@ -1,0 +1,92 @@
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 305434, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 303246, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 1034256, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 1054646, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 1065654, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 1026720, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 1025729, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 1023807, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 1031124, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 1039687, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 2763978, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 1026053, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 1033774, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 2867028, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 1025653, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 1029421, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 13324546, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 13324546, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 47125576, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'Timing attack', 'lowest_entropy_feature': 'total_time', 'feature_value_to_drop': 47125576, 'actions': ['Dropping suspicious packets']}
+
+*** Potential attack detected! ***
+Procedure_3 executed: {'attack_type': 'IP-based attack', 'lowest_entropy_feature': 'dst[arp]', 'feature_value_to_drop': '10.0.0.2', 'actions': ['Dropping suspicious packets']}
+
+*** Performance Metrics ***
+                   Metric    Value
+              Sensitivity 0.025000
+              Specificity 1.000000
+                Precision 1.000000
+Negative Predictive Value 0.204082
+      False Positive Rate 0.000000
+     False Discovery Rate 0.000000
+      False Negative Rate 0.975000
+           Detection Rate 0.025000
+                 F1 Score 0.048780
+*** Blacklist and Dropped Packet Counts ***
+Feature: dst[arp], Values: ['10.0.0.2'], Dropped Packets: 98293
+
+*** Dropped Packets Details ***
+
+Feature: dst[arp]
+Feature Value: 10.0.0.2
+Initial dropped packets:
+{'dst[arp]': '10.0.0.2', 'src[arp]': '109.172.79.1', 'pkt_size': 647, 'total_time': 1028649}
+{'dst[arp]': '10.0.0.2', 'src[arp]': '249.90.146.243', 'pkt_size': 1420, 'total_time': 1028649}
+{'dst[arp]': '10.0.0.2', 'src[arp]': '57.11.180.95', 'pkt_size': 590, 'total_time': 1028649}
+...
+Last dropped packets:
+{'dst[arp]': '10.0.0.2', 'src[arp]': '130.118.245.13', 'pkt_size': 969, 'total_time': 1028649}
+{'dst[arp]': '10.0.0.2', 'src[arp]': '130.118.245.13', 'pkt_size': 300, 'total_time': 1028649}
+{'dst[arp]': '10.0.0.2', 'src[arp]': '13.238.32.33', 'pkt_size': 798, 'total_time': 1028649}
+Total dropped packets for 10.0.0.2: 91850

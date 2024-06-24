@@ -1,0 +1,16 @@
+
+1. Create custom dataset (for normal and attack traffic)
+2. Discussion on initial value of weights of features/Alpha/ Theta (its range) // most important
+3. Analysis of Detection results: 
+        Sensitivity   
+        Specificity  
+        Precision 
+        Negative Predictive Value
+        False Positive Rate
+        False Discovery Rate  
+        False Negative Rate 
+        Detection Rate
+        F1 Score
+4. Attack classifier (Procedure 3)
+5. Put the code in SDN controller
+6. Check for more possiblity of drawing graphs (visualization)
